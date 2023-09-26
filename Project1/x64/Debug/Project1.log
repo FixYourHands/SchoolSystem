@@ -1,0 +1,4 @@
+﻿  Course.cpp
+F:\Programming\Projects\SchoolSystem\Project1\Course.cpp(19,9): error C2065: 'MinStudents': undeclared identifier
+  Source.cpp
+  Generating Code...
