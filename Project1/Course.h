@@ -22,6 +22,18 @@ public:
 	int getMinStudents() const;
 	int getMaxStudents() const;
 	std::vector<Student> getClass() const;
+	int getClassSize() const;
+	void enrollStudent(const Student& obj)
+	{
+		if (studentBody.size() < maxStudents)
+		{
+			studentBody.push_back(obj);
+		}
+		else
+		{
+			std::cout << "Maximum amount of students enrolled!\n";
+		}
+	}
 
 
 	

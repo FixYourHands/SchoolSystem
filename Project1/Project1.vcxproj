@@ -132,6 +132,7 @@
     <ClCompile Include="Course.cpp" />
     <ClCompile Include="Person.cpp" />
     <ClCompile Include="Source.cpp" />
+    <ClCompile Include="Student.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Address.h" />

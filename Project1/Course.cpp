@@ -23,7 +23,7 @@ Course::Course()
 	this->creditHours = 0;
 	this->minStudents = 0;
 	this->maxStudents = 0;
-	if (uniqueCourseCode >= 200)
+	if (uniqueCourseCode >= MAX_COURSE_CODE)
 	{
 		uniqueCourseCode = 0;
 	}
@@ -50,3 +50,10 @@ std::vector<Student> Course::getClass() const
 {
 	return studentBody;
 }
+
+int Course::getClassSize() const
+{
+	return studentBody.size();
+}
+
+int Course::uniqueCourseCode = 0;
