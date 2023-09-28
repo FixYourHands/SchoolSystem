@@ -53,7 +53,18 @@ std::vector<Student> Course::getClass() const
 
 int Course::getClassSize() const
 {
-	return studentBody.size();
+	return this->studentBody.size();
 }
+
+ActiveStatus Course::getEnrollmentStatus() const
+{
+	return this->classActiveStatus;
+}
+
+OccupancyStatus Course::getOccupancyStatus() const
+{
+	return this->classCccupancyStatus;
+}
+
 
 int Course::uniqueCourseCode = 0;

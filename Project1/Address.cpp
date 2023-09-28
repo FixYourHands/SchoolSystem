@@ -1,6 +1,6 @@
 #include "Address.h"
 
-Address::Address(std::string country = "N/A", std::string city = "N/A", std::string state = "N/A", std::string streetName = "N/A", std::string postalCode = "N/A")
+Address::Address(std::string country, std::string city, std::string state, std::string streetName, std::string postalCode)
 {
 	this->country = country;
 	this->city = city;
@@ -15,7 +15,7 @@ Address::Address()
 	this->city = "N/A";
 	this->state = "N/A";
 	this->streetName = "N/A";
-	this->postalCode = "N/A";
+	this->postalCode = "00000";
 }
 
 
@@ -36,10 +36,10 @@ std::string Address::getCity() const
 
 std::string Address::getStreetName() const
 {
-	return this->country;
+	return this->streetName;
 }
 
 std::string Address::getPostalCode() const
 {
-	return this->country;
+	return this->postalCode;
 }

@@ -1,2 +1,8 @@
-﻿  Source.cpp
+﻿  Address.cpp
+  Course.cpp
+F:\Programming\Projects\SchoolSystem\Project1\Course.cpp(56,33): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  Person.cpp
+  Source.cpp
+  Student.cpp
+  Generating Code...
   Project1.vcxproj -> F:\Programming\Projects\SchoolSystem\Project1\x64\Debug\SchoolSystem.exe

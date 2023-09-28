@@ -1,11 +1,9 @@
 #include "Address.h"
 #include "Course.h"
+#include <iostream>
 
 
-void enrollStudent(const Student& student, Course& courseName)
-{
-	courseName.enrollStudent(student);
-}
+std::vector<Course> fullRoster(10000);
 
 void ignoreInput()
 {
@@ -30,6 +28,7 @@ int main()
 	Course Course1("Math101", 3.0, 5, 30);
 
 	Address address1("USA", "Phoenix", "Arizona", "7708 South 23rd Lane", "85041");
+	std::cout << sizeof(fullRoster);
 
 
 
