@@ -11,15 +11,15 @@ class Student;
 class Course
 {
 private:
-	std::string courseName;
-	static int uniqueCourseCode;
-	int courseCode;
-	int minStudents;
-	int maxStudents;
-	float creditHours;
-	std::vector<Student> studentBody;
-	ActiveStatus classActiveStatus;
-	OccupancyStatus classCccupancyStatus;
+	std::string m_courseName;
+	static int m_uniqueCourseCode;
+	int m_courseCode;
+	int m_minStudents;
+	int m_maxStudents;
+	float m_creditHours;
+	Roster m_classRoster;
+	ActiveStatus m_classActiveStatus;
+	OccupancyStatus m_classCccupancyStatus;
 public:
 	Course(std::string name,float numOfCredits, int minStudents, int maxStudents);
 	Course();

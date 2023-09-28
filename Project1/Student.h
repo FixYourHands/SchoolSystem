@@ -9,13 +9,13 @@ class Course;
 class Student : public Person
 {
 private:
-	float GPA;
-	float creditHours;
-	unsigned int classCount;
-	bool isInternationalStudent;
-	bool isOnProbation;
-	bool isPartTime;
-	std::vector<Course> enrolledCoursesList;
+	float m_GPA;
+	float m_creditHours;
+	unsigned int m_classCount;
+	bool m_isInternationalStudent;
+	bool m_isOnProbation;
+	bool m_isPartTime;
+	std::vector<Course> m_enrolledCoursesList;
 public:
 	
 	//use the same constructor as Person class

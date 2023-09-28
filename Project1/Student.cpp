@@ -5,79 +5,79 @@ const int MAX_CLASS_COUNT = 6;//maximum amount of classes a student can enroll i
 Student::Student(std::string firstName, std::string lastName, std::string phoneNumber, const Address& address, bool foreignStatus = false)
 	:Person(firstName,lastName,phoneNumber,address)
 {
-	this->GPA = 0.f;
-	this->classCount = 0;
-	this->creditHours = 0.f;
-	this->isInternationalStudent = foreignStatus;
-	this->isOnProbation = false;
-	this->isPartTime = false;
+	this->m_GPA = 0.f;
+	this->m_classCount = 0;
+	this->m_creditHours = 0.f;
+	this->m_isInternationalStudent = foreignStatus;
+	this->m_isOnProbation = false;
+	this->m_isPartTime = false;
 }
 
 Student::Student(std::string firstName, std::string lastName, std::string phoneNumber, bool foreignStatus = false)
 	:Person(firstName, lastName, phoneNumber)
 {
-	this->GPA = 0.f;
-	this->classCount = 0;
-	this->creditHours = 0.f;
-	this->isInternationalStudent = foreignStatus;
-	this->isOnProbation = false;
-	this->isPartTime = false;
+	this->m_GPA = 0.f;
+	this->m_classCount = 0;
+	this->m_creditHours = 0.f;
+	this->m_isInternationalStudent = foreignStatus;
+	this->m_isOnProbation = false;
+	this->m_isPartTime = false;
 }
 
 Student::Student(std::string firstName, std::string lastName, bool foreignStatus)
 	:Person(firstName,lastName)
 {
-	this->GPA = 0.f;
-	this->classCount = 0;
-	this->creditHours = 0.f;
-	this->isInternationalStudent = foreignStatus;
-	this->isOnProbation = false;
-	this->isPartTime = false;
+	this->m_GPA = 0.f;
+	this->m_classCount = 0;
+	this->m_creditHours = 0.f;
+	this->m_isInternationalStudent = foreignStatus;
+	this->m_isOnProbation = false;
+	this->m_isPartTime = false;
 }
 
 Student::Student()
 	:Person()
 {
-	this->GPA = 0.f;
-	this->classCount = 0;
-	this->creditHours = 0.f;
-	this->isInternationalStudent = false;
-	this->isOnProbation = false;
-	this->isPartTime = false;
+	this->m_GPA = 0.f;
+	this->m_classCount = 0;
+	this->m_creditHours = 0.f;
+	this->m_isInternationalStudent = false;
+	this->m_isOnProbation = false;
+	this->m_isPartTime = false;
 }
 
 float Student::getGPA() const
 {
-	return this->GPA;
+	return this->m_GPA;
 }
 
 float Student::getCreditHours() const
 {
-	return this->creditHours;
+	return this->m_creditHours;
 }
 
 int Student::getClassCount() const
 {
-	return this->classCount;
+	return this->m_classCount;
 }
 
 bool Student::getInternationalStatus() const
 {
-	return this->isInternationalStudent;
+	return this->m_isInternationalStudent;
 }
 
 bool Student::getPartTimeStatus() const
 {
-	return this->isPartTime;
+	return this->m_isPartTime;
 }
 
 
 bool Student::getProbationStatus() const
 {
-	return this->isOnProbation;
+	return this->m_isOnProbation;
 }
 
 std::vector<Course> Student::getEnrolledCoursesList() const
 {
-	return this->enrolledCoursesList;
+	return this->m_enrolledCoursesList;
 }

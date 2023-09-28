@@ -4,67 +4,66 @@ const int MAX_COURSE_CODE = 200;
 
 Course::Course(std::string name, float numOfCredits, int minStudents, int maxStudents)
 {
-	this->courseName = name;
-	this->creditHours = numOfCredits;
-	this->minStudents = minStudents;
-	this->maxStudents = maxStudents;
-	if (uniqueCourseCode >= MAX_COURSE_CODE)
+	this->m_courseName = name;
+	this->m_creditHours = numOfCredits;
+	this->m_minStudents = minStudents;
+	this->m_maxStudents = maxStudents;
+	if (m_uniqueCourseCode >= MAX_COURSE_CODE)
 	{
-		uniqueCourseCode = 0;
+		m_uniqueCourseCode = 0;
 	}
-	uniqueCourseCode++;
-	this->courseCode = uniqueCourseCode;
+	m_uniqueCourseCode++;
+	this->m_ourseCode = m_uniqueCourseCode;
 	
 }
 
 Course::Course()
 {
-	this->courseName = "N/A";
-	this->creditHours = 0;
-	this->minStudents = 0;
-	this->maxStudents = 0;
-	if (uniqueCourseCode >= MAX_COURSE_CODE)
+	this->m_courseName = "N/A";
+	this->m_creditHours = numOfCredits;
+	this->m_minStudents = minStudents;
+	this->m_maxStudents = maxStudents;
+	if (m_uniqueCourseCode >= MAX_COURSE_CODE)
 	{
-		uniqueCourseCode = 0;
+		m_uniqueCourseCode = 0;
 	}
-	uniqueCourseCode++;
-	this->courseCode = uniqueCourseCode;
+	m_uniqueCourseCode++;
+	this->m_courseCode = m_uniqueCourseCode;
 }
 
 int Course::getCourseCode() const
 {
-	return courseCode;
+	return this->m_courseCode;
 }
 
 int Course::getMinStudents() const
 {
-	return minStudents;
+	return this->m_minStudents;
 }
 
 int Course::getMaxStudents() const
 {
-	return maxStudents;
+	return this->m_maxStudents;
 }
 
-std::vector<Student> Course::getClass() const
+Roster Course::getClassRoster() const
 {
-	return studentBody;
+	return this->m_classRoster;
 }
 
 int Course::getClassSize() const
 {
-	return this->studentBody.size();
+	return this->.size();
 }
 
 ActiveStatus Course::getEnrollmentStatus() const
 {
-	return this->classActiveStatus;
+	return this->m_classActiveStatus;
 }
 
 OccupancyStatus Course::getOccupancyStatus() const
 {
-	return this->classCccupancyStatus;
+	return this->m_classCccupancyStatus;
 }
 
 
-int Course::uniqueCourseCode = 0;

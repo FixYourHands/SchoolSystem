@@ -7,12 +7,12 @@ class Person
 {
 private:
 	//dateofbirth
-	std::string firstName;
-	std::string lastName;
-	std::string phoneNumber;
-	Address address;
-	static int uniqueId;
-	int idNumber;
+	std::string m_firstName;
+	std::string m_lastName;
+	std::string m_phoneNumber;
+	Address m_address;
+	static int m_uniqueId;
+	int m_idNumber;
 
 public:
 	Person(std::string firstName, std::string lastName, std::string phoneNumber, const Address& address);
